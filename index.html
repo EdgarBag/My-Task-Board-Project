@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/fav.png" />
+
+    <title>My Task Board</title>
+</head>
+
+<body>
+    <div id="page">
+        <form>
+            <!-- Header -->
+            <header>
+                <h1> My Task Board</p>
+            </header>
+            <!-- Place to create a new task -->
+            <div id="info">
+                <div id="container">
+                    <div><img src="assets/formbg.jpg" width="600"></div>
+                    <div><img src="assets/formbg.jpg" width="600"></div>
+                    <div><img src="assets/formbg.jpg" width="600"></div>
+                </div>
+                <div id="enterInfo">
+
+                    <textarea id="taskBox" class="descriptionTextAria" name="task" cols="15" rows="3"
+                        placeholder="Enter your task:"></textarea>
+                    <br>
+                    <label for="expiryDateBox" class="date">Date</label>
+                    <input id="expiryDateBox" class="datePicker" type="date" name="expiryDate">
+                    <br>
+                    <label for="expiryTimeBox" class="time">Time</label>
+                    <input id="expiryTimeBox" class="timePicker" type="time" name="expiryTime">
+                    <br>
+                    <button id="createTaskButton" onclick="createNewTask()" type="button" class="btn btn-success">Create
+                        Task</button>
+                    <button id="clearButton" type="reset" class="btn btn-danger">Clear</button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+    <!-- End of place to create a new task -->
+
+
+    
+    <!-- Place for future tasks -->
+    <div id="tasks">
+    </div>
+
+
+    <!-- Invisible Div for New Tasks -->
+    <div id="taskTamplate" class="taskTamplate"
+        style="background-image: url(assets/notebg.png); background-repeat: no-repeat;width: 200px; height: 400px;">
+        <img class="iconClose" src="assets/x.png" onclick="deleteTask(this.id)">
+        <p class="descriptionP">this is description</p>
+        <p class="dateP"> this is date</p>
+        <p class="timeP"> this time</p>
+
+    </div>
+    <script src="main.js"></script>
+
+</body>
+
+</html>

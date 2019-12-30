@@ -1,0 +1,184 @@
+html,
+body {
+    height: 100%;
+    margin: 5px;
+    padding: 5px;
+    background-image: url("assets/tile.jpg")
+}
+
+/* #page {
+    height: 100%;
+} */
+
+h1 {
+    font-family: newFont;
+
+    height: 10%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    width: 20%;
+   
+}
+#info{
+    height: 40%;
+}
+@font-face {
+    font-family: newFont;
+    src: url(assets/new-font11.ttf);
+}
+
+/* Style of existing tasks*/
+#tasks {
+    height: 50%;
+    position: absolute;
+    float: left;
+}
+
+
+.iconClose {
+    width: 12px;
+    margin: 15px 0 0 65%;
+    cursor: pointer;
+    visibility: visible;
+    overflow: auto;
+    z-index: 1000;
+}
+
+
+.descriptionP {
+    background-color: transparent;
+    width: 170px;
+    height: 120px;
+    overflow: auto;
+    font-size: small;
+    text-align: justify;
+    position: relative;
+    left: 5px;
+
+}
+
+.dateP,
+.timeP {
+    left: -60px;
+    position: relative;
+    font-size: small;
+    top: 20px
+}
+
+#taskTamplate {
+    visibility: hidden;
+    float: left;
+    margin-top: 25px;
+    font-size: 21px;
+    text-align: center;
+    -webkit-animation: fadein 2s;
+    z-index: 2;
+}
+
+@-webkit-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+#iconClose{
+    visibility: hidden;
+}
+
+/* Style of new Task */
+#container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%;
+    padding: 0;
+    grid-template-rows: 65px 65px;
+    position: relative;
+}
+
+
+#enterInfo {
+
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%;
+    padding: 0;
+    grid-template-rows: 60px 60px;
+    position: relative;
+    top: -180px;
+    border: 6px;
+}
+
+.descriptionTextAria {
+    width: 300px;
+    height: 7em;
+    scrollbar-base-color: #ff8c00;
+    scrollbar-arrow-color: white;
+    float: left;
+    background-color: antiquewhite;
+
+}
+
+.datePicker,
+.timePicker {
+    position: absolute;
+    float: right;
+    top: -2px;
+    margin-left: 10px;
+    background-color: antiquewhite;
+
+
+}
+
+.date {
+    position: relative;
+    top: -30px;
+    padding: 5px;
+    font-family: newFont;
+    font-size: larger
+}
+
+.time {
+    position: relative;
+    top: -8px;
+    padding: 5px;
+    font-family: newFont;
+    font-size: larger
+}
+
+.timePicker {
+    top: 63px;
+    left: 350px
+}
+
+.datePicker {
+    left: 350px
+}
+
+#createTaskButton,
+#clearButton {
+    position: absolute;
+    margin-left: 10px;
+    display: inline-block;
+
+}
+
+#createTaskButton {
+    top: 127px;
+    left: 182px;
+}
+
+#clearButton {
+    left: 0px;
+    top: 127px
+}
+
+
+.iconClose{
+    visibility: hidden;
+}
